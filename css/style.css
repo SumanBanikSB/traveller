@@ -7,7 +7,14 @@
  */
  /*logo */
 
+ /* Make sure the date picker is above other content */
+ .datetimepicker-widget {
+  z-index: 1050 !important; /* Ensure it’s higher than other elements */
+}
 
+.date-container {
+  position: relative; /* Ensure this container is positioned relatively */
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -631,12 +638,12 @@ pre code {
     max-width: 1140px;
   }
 }
-
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -27px;
+  margin-left: -27px;
+  justify-content: center;
 }
 
 .no-gutters {
@@ -9602,8 +9609,8 @@ h6,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: .5s;
   z-index: 1;
 }

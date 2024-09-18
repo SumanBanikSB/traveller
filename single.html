@@ -114,50 +114,125 @@
     <!-- Header End -->
 
 
-    <!-- Booking Start -->
-    <div class="container-fluid booking mt-5 pb-5">
-        <div class="container pb-5">
-            <div class="bg-light shadow" style="padding: 30px;">
-                <form id="bookingForm" action="send-message.php" method="post">
+    <style>
+        /* Ensure the date picker z-index is higher than other elements */
+        .datetimepicker-input {
+            z-index: 1050 !important; /* Adjust this value if necessary */
+        }
+        
+        /* Add spacing to avoid overlap */
+        .booking {
+            margin-top: 30px; /* Adjust margin to ensure proper spacing */
+        }
+        </style>
+        
+        <!-- Second Booking Section (Placed Above First Booking Section) -->
+        <div class="container-fluid booking mt-5 pb-5">
+            <div class="container pb-5">
+                <div class="bg-light shadow" style="padding: 30px;">
+                    <h3 class="mb-4">From-To Booking</h3> <!-- Title for Second Section -->
+                    <div class="row align-items-center" style="min-height: 60px;">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <!-- From Destination -->
+                                <div class="col-md-3">
+                                    <div class="mb-3 mb-md-0">
+                                        <input type="text" id="fromDestinationNew" class="form-control p-4" placeholder="From Destination" required/>
+                                    </div>
+                                </div>
+                                <!-- To Destination -->
+                                <div class="col-md-3">
+                                    <div class="mb-3 mb-md-0">
+                                        <input type="text" id="toDestinationNew" class="form-control p-4" placeholder="To Destination" required/>
+                                    </div>
+                                </div>
+                                <!-- Independent Depart Date -->
+                                <div class="col-md-3">
+                                    <div class="mb-3 mb-md-0">
+                                        <div class="date" id="dateNew" data-target-input="nearest">
+                                            <input type="text" id="departDateNew" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#dateNew" data-toggle="datetimepicker" required/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Travel Type -->
+                                <div class="col-md-3">
+                                    <div class="mb-3 mb-md-0">
+                                        <select id="groupTypeNew" class="custom-select px-4" style="height: 47px;" required>
+                                            <option value="">Travel Type</option>
+                                            <option value="Single">Individual</option>
+                                            <option value="Group">Group</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button id="submitBtnNew" class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
+                        </div>
+                    </div>
+                    <div id="successMessage2" style="display: none;">
+                        <h4 class="mt-3 text-success">Your from-to booking has been submitted successfully!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- First Booking Section -->
+        <div class="container-fluid booking mt-5 pb-5">
+            <div class="container pb-5">
+                <div class="bg-light shadow" style="padding: 30px;">
+                    <h3 class="mb-4">Destination Booking</h3> <!-- Title for First Section -->
                     <div class="row align-items-center" style="min-height: 60px;">
                         <div class="col-md-10">
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="mb-3 mb-md-0">
-                                        <select class="custom-select px-4" name="destination" style="height: 47px;">
-                                            <option selected>Destination</option>
+                                        <select id="destination" class="custom-select px-4" style="height: 47px;" required>
+                                            <option value="">Select Destination</option>
                                             <option value="Darjeeling">Darjeeling</option>
                                             <option value="Kurseong">Kurseong</option>
                                             <option value="Kalimpong">Kalimpong</option>
+                                            <option value="Sikkim">Sikkim</option>
+                                            <option value="Mirik">Mirik</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="mb-3 mb-md-0">
                                         <div class="date" id="date1" data-target-input="nearest">
-                                            <input type="text" name="departDate" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
+                                            <input type="text" id="departDate" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker" required/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="mb-3 mb-md-0">
                                         <div class="date" id="date2" data-target-input="nearest">
-                                            <input type="text" name="returnDate" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
+                                            <input type="text" id="returnDate" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker" required/>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="mb-3 mb-md-0">
+                                        <select id="duration" class="custom-select px-4" style="height: 47px;" required>
+                                            <option value="">Duration</option>
+                                            <option value="1 Day">1 Day</option>
+                                            <option value="2 Days">2 Days</option>
+                                            <option value="3 Days">3 Days</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
+                            <button id="submitBtn" class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
                         </div>
                     </div>
-                </form>
+                    <div id="successMessage1" style="display: none;">
+                        <h4 class="mt-3 text-success">Your booking has been submitted successfully!</h4>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Booking End -->
-
 
     <!-- Blog Start -->
     <div class="container-fluid py-5">
@@ -501,6 +576,69 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+    
+            // Get form values
+            const destination = document.getElementById('destination').value;
+            const departDate = document.getElementById('departDate').value;
+            const returnDate = document.getElementById('returnDate').value;
+            const duration = document.getElementById('duration').value;
+    
+            // Validate fields
+            if (!destination) {
+                alert("Please select a destination.");
+                return;
+            }
+            if (!departDate) {
+                alert("Please enter a depart date.");
+                return;
+            }
+            if (!returnDate) {
+                alert("Please enter a return date.");
+                return;
+            }
+            if (!duration) {
+                alert("Please select a duration.");
+                return;
+            }
+    
+            // If all fields are valid, proceed with your desired action (e.g., WhatsApp redirect)
+            const message = `Destination: ${destination}\nDepart Date: ${departDate}\nReturn Date: ${returnDate}\nDuration: ${duration}`;
+            const encodedMessage = encodeURIComponent(message);
+    
+            // WhatsApp URL with pre-filled message
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=9382475020&text=${encodedMessage}`;
+    
+            // Open WhatsApp with the pre-filled message
+            window.open(whatsappUrl, '_blank');
+        });
+        // Second Booking Section Script
+document.getElementById('submitBtnNew').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const title = 'From-To Booking with Travel Type'; // Title for the form
+    const fromDestinationNew = document.getElementById('fromDestinationNew').value;
+    const toDestinationNew = document.getElementById('toDestinationNew').value;
+    const departDateNew = document.getElementById('departDateNew').value;
+    const groupTypeNew = document.getElementById('groupTypeNew').value;
+
+    if (!fromDestinationNew || !toDestinationNew || !departDateNew || !groupTypeNew) {
+        alert("Please fill all fields in the From-To Booking section.");
+        return;
+    }
+
+    const messageNew = `Form: ${title}\nFrom: ${fromDestinationNew}\nTo: ${toDestinationNew}\nDepart Date: ${departDateNew}\nTravel Type: ${groupTypeNew}`;
+    const encodedMessageNew = encodeURIComponent(messageNew);
+    const whatsappUrlNew = `https://api.whatsapp.com/send?phone=9382475020&text=${encodedMessageNew}`;
+    window.open(whatsappUrlNew, '_blank');
+
+        });
+    </script>
+    
+    
 </body>
 
 </html>
