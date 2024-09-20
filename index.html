@@ -23,6 +23,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
+     <link rel="stylesheet" href="css/extra.css">n
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -67,7 +68,7 @@
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <h1 class="m-0 text-primary"><span class="text-dark">MUKTI</span>DAAYI</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -79,6 +80,7 @@
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="destination.html" class="nav-item nav-link">Destination</a>
+                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <a href="package.html" class="nav-item nav-link">Tour Packages</a>
                         <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
@@ -161,7 +163,7 @@
                         <div class="col-md-3">
                             <div class="mb-3 mb-md-0">
                                 <div class="date" id="dateNew" data-target-input="nearest">
-                                    <input type="text" id="departdateNew" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#dateNew" data-toggle="datetimepicker" required/>
+                                    <input type="text" id="departDateNew" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#dateNew" data-toggle="datetimepicker" required/>
                                 </div>
                             </div>
                         </div>
@@ -226,7 +228,7 @@
             </div>
         </div>
     </div>
-    <!-- Booking End -->
+    <!-- Booking End --> 
 
 
     <!-- About Start -->
@@ -251,7 +253,7 @@
                                 <img class="img-fluid" src="img/doars.jpg" alt="Doars">
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary mt-1">Book Now</a>
+                        <!-- <a href="" class="btn btn-primary mt-1">Book Now</a> -->
                     </div>
                 </div>
             </div>
@@ -366,6 +368,10 @@
                         </a>
                     </div>
                 </div>
+                <!-- Add the View More button -->
+                <div class="text-center mt-4">
+                    <a href="gallery.html" class="btn view-more-btn">View More <span class="arrow">→</span></a>
+                </div>
             </div>
         </div>
     </div>
@@ -469,6 +475,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -499,7 +506,7 @@
                             <h1 class="text-white m-0">Contact us</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-white p-5">
-                            <form>
+                            <form id="contactForm" >
                                 <div class="form-group">
                                     <input type="text" class="form-control p-4" placeholder="Your name" required="required" />
                                 </div>
@@ -753,6 +760,7 @@
                     <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
                     <a class="text-white-50 mb-2" href="destination.html"><i class="fa fa-angle-right mr-2"></i>Destination</a>
                     <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
                     <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     
                   
@@ -764,6 +772,7 @@
                     <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
                     <a class="text-white-50 mb-2" href="destination.html"><i class="fa fa-angle-right mr-2"></i>Destination</a>
                     <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
                     <a class="text-white-50 mb-2" href="package.html"><i class="fa fa-angle-right mr-2"></i>Packages</a>
                     
                   
@@ -826,6 +835,7 @@
     <script src="js/main.js"></script>
     <script src="js/date.js"></script>
      <!--Whatsapp Js-->
+     <script src="js/contact.js"></script>
     <script src="js/whatsapp.js"></script>
 </body>
 

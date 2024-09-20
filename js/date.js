@@ -1,14 +1,35 @@
 $(document).ready(function () {
+    // Initialize the datetimepickers
     $('#dateNew').datetimepicker({
         format: 'L',
         widgetPositioning: {
-            vertical: 'bottom', // Adjust this to 'top' if you want the picker to rise upward
-        }
+            vertical: 'bottom',
+        },
+        container: 'body' // Appending to body to avoid overflow issues
     });
+    
     $('#departDateNew').datetimepicker({
         format: 'L',
         widgetPositioning: {
-            vertical: 'top', // Adjust this to 'top' if you want the picker to rise upward
-        }
+            vertical: 'bottom',
+        },
+        container: 'body'
+    });
+
+    // For the second booking section
+    $('#date1').datetimepicker({
+        format: 'L',
+        widgetPositioning: {
+            vertical: 'bottom',
+        },
+        container: 'body'
+    });
+    
+    $('#date2').datetimepicker({
+        format: 'L',
+        widgetPositioning: {
+            vertical: 'bottom',
+        },
+        container: 'body'
     });
 });

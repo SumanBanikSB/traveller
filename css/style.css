@@ -8,13 +8,9 @@
  /*logo */
 
  /* Make sure the date picker is above other content */
- .datetimepicker-widget {
-  z-index: 1050 !important; /* Ensure it’s higher than other elements */
-}
-
-.date-container {
-  position: relative; /* Ensure this container is positioned relatively */
-}
+ #top{
+  z-index: 2;
+ }
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7607,7 +7603,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 3rem !important;
+  padding-bottom: 1.99rem !important;
 }
 
 .pl-5,
