@@ -11,6 +11,8 @@
  #top{
   z-index: 2;
  }
+
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7591,11 +7593,14 @@ button.bg-dark:focus {
   padding: 3rem !important;
 }
 
-.pt-5,
-.py-5 {
-  padding-top: 3rem !important;
+.pt-5
+{
+  padding-top: 0.2rem !important;
 }
-
+.py-5 
+{
+  padding-top: 3.0rem !important;
+}
 .pr-5,
 .px-5 {
   padding-right: 3rem !important;
@@ -7603,7 +7608,10 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 1.99rem !important;
+  padding-bottom: 1.3rem !important;
+}
+.pb-5{
+  padding-top: 0.6rem;
 }
 
 .pl-5,

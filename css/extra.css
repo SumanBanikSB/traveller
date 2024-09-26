@@ -64,26 +64,3 @@
     }
 }
 
-@media (min-width: 992px) {
-    .gallery-item {
-        border-radius: 16px;
-    }
-}
-
-  .view-more-btn .arrow {
-    color:  black;
-    margin-left: 10px;
-    display: inline-block;
-    transition: transform 0.3s;
-  }
-  
-  .view-more-btn:hover {
-    background-color: #7AB730; /* Darker shade on hover */
-    color: black;
-    transform: translateX(3px); /* Slight movement on hover */
-  }
-  
-  .view-more-btn:hover .arrow {
-    transform: translateX(3px); /* Move the arrow slightly to the right */
-  }
-  
