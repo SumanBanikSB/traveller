@@ -11,7 +11,7 @@
         var whatsappMessage = `Hello, I am ${name} and my email is ${email}. I am interested in traveling to ${destination}. Please provide me with more details.`;
 
         // WhatsApp URL with your phone number and message
-        var whatsappUrl = `https://wa.me/9382475020?text=${encodeURIComponent(whatsappMessage)}`;
+        var whatsappUrl = `https://wa.me/7431802847?text=${encodeURIComponent(whatsappMessage)}`;
 
         // Redirect to WhatsApp
         window.open(whatsappUrl, '_blank');

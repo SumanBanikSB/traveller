@@ -45,7 +45,7 @@ document.getElementById('submitBtnNew').addEventListener('click', function(event
 
     const messageNew = `Form: ${title}\nFrom: ${fromDestinationNew}\nTo: ${toDestinationNew}\nDepart Date: ${departDateNew}\nTravel Type: ${groupTypeNew}`;
     const encodedMessageNew = encodeURIComponent(messageNew);
-    const whatsappUrlNew = `https://api.whatsapp.com/send?phone=9382475020&text=${encodedMessageNew}`;
+    const whatsappUrlNew = `https://api.whatsapp.com/send?phone=7431802847&text=${encodedMessageNew}`;
     window.open(whatsappUrlNew, '_blank');
 
 });
@@ -70,7 +70,7 @@ function sendToWhatsApp(event) {
     var encodedMessage = encodeURIComponent(whatsappMessage);
 
     // WhatsApp URL with your phone number and the pre-filled message
-    var whatsappUrl = "https://wa.me/9382475020?text=" + encodedMessage;
+    var whatsappUrl = "https://wa.me/7431802847?text=" + encodedMessage;
 
     // Open WhatsApp with the pre-filled message
     window.open(whatsappUrl, "_blank");
